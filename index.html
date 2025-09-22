@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Karan's Portfolio</h1>
+        <p>Digital Creator | SEO Expert | Web Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm an expert in SEO strategies, content optimization, and digital marketing with a passion for web
+            development.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <div class="project" onclick="window.open('https://codeyogi.streamlit.app', '_blank')">
+                🧘 CodeYogi - AI Chatbot
+              </div>
+            <div class="project" onclick="showProjectDetails('Project 2')">Project 2</div>
+            <div class="project" onclick="showProjectDetails('Project 3')">Project 3</div>
+        </div>
+        <div id="project-modal" class="hidden">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="project-title"></h3>
+                <p>Project details go here...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>📬 Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" class="input-field" placeholder="Your Name" required>
+          <input type="email" class="input-field" placeholder="Your Email" required>
+          <textarea class="input-field" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="project-button">Send</button>
+        </form>
+      </section>
+      
+      
+
+    <footer>
+        <p>&copy; 2025 Karan's Portfolio | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>
