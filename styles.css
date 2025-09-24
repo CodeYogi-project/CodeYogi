@@ -67,7 +67,20 @@ nav ul li a:hover {
 
 /* Section Spacing */
 section {
-    padding: 160px 20px 60px; /* Increased top padding to offset header */
+    padding: 100px 20px 60px; /* General spacing for all sections */
+}
+
+/* Specific fix for About section */
+#about {
+    padding-top: 250px; /* Ensures heading is fully visible below fixed header */
+}
+
+#portfolio {
+    padding-top: 300px;
+}
+
+#contact {
+    padding-top: 250px;
 }
 
 /* Smooth Scrolling */
