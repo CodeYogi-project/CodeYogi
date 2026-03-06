@@ -69,7 +69,7 @@ if st.session_state.messages:
         # ✅ Correct structured format for Gemini
         gemini_response = model.generate_content(
             contents=[
-                {"role": "system", "parts": [system_prompt]},
+                {"role": "user", "parts": [system_prompt]},  # system prompt must be sent as user context
                 {"role": "user", "parts": [user_input]}
             ]
         )
