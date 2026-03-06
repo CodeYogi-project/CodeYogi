@@ -66,7 +66,13 @@ if st.session_state.messages:
     system_prompt = build_system_prompt()  # ✅ Rebuilt fresh every time
 
     with st.spinner("Thinking..."):
-        gemini_response = model.generate_content([system_prompt, user_input])
+        # ✅ Correct structured format for Gemini
+        gemini_response = model.generate_content(
+            contents=[
+                {"role": "system", "parts": [system_prompt]},
+                {"role": "user", "parts": [user_input]}
+            ]
+        )
         output = gemini_response.text
 
         # 🧾 Detect and display code block
